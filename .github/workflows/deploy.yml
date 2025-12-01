@@ -33,6 +33,8 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name : run Tests
+        run: npm run lint
 
       - name: Build App
         run: npm run build
