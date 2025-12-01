@@ -2,7 +2,9 @@ name: Deploy React Vite App
 
 on: 
   push:
-   branches: [dev_hassan]       
+   branches: [dev_hassan]      
+  pull_request:
+   branches: [main] 
   workflow_dispatch:       
 
 jobs:
@@ -16,10 +18,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20     # choose stable LTS
+          node-version: 20    
 
+      - name : cache dependencies
+        uses: actions/cache@v3
+        with:
+         path: ~/.npm
+         key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
+         restore-keys: |
+          ${{ runner.os }}-npm-
+
+
+            
       - name: Install Dependencies
-        run: npm install
+        run: npm cli
 
 
       - name: Build App
