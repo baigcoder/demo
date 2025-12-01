@@ -29,9 +29,9 @@ jobs:
           ${{ runner.os }}-npm-
 
 
-            
+
       - name: Install Dependencies
-        run: npm cli
+        run: npm ci
 
 
       - name: Build App
