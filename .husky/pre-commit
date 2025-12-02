@@ -1,3 +1,5 @@
+echo "Running Prettier..."
+npm run format
 
 echo "Running ESLint..."
 npm run lint

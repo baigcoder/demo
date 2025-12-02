@@ -1,7 +1,6 @@
 services:
-   
-   viteAPP:
-   image: "baigo1243/vite_app:01"
-   container_name: "webapp_1"
-   ports:
+  viteAPP:
+  image: "baigo1243/vite_app:01"
+  container_name: "webapp_1"
+  ports:
     - "5174:5173"

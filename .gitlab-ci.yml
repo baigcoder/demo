@@ -5,4 +5,3 @@ stages:
 variables:
   DOCKER_IMAGE: "baigo1243/vite_app:latest"
   DOCKER_USERNAME: "baigo1243"
-
